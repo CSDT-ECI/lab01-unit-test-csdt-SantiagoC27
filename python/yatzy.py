@@ -9,6 +9,18 @@ class Yatzy:
         total += d4
         total += d5
         return total
+    
+    @staticmethod
+    def crazyChance(dice):
+        total = 0
+        for die in dice:
+            if die / 2 == 0:
+                die * 3
+                total += die
+            if die / 2 != 0:
+                die * 2
+                total += die
+        return total
 
     @staticmethod
     def yatzy(dice):
